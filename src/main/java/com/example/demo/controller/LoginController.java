@@ -10,7 +10,7 @@ public class LoginController {
 	@PreAuthorize("hasAnyRole('USER')")
 	@RequestMapping("/welcome")
 	public String getLoginMessage() {
-		System.out.println("ControllerPrint");
+		System.out.println("ControllerPrintPleasePrint");
 		return "welcome";
 	}
 
