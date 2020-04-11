@@ -4,9 +4,6 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building'
-                echo 'Building'
-                echo 'Building'
-                echo 'Building'
             }
         }
         
