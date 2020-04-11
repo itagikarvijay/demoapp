@@ -6,6 +6,7 @@ pipeline {
                 echo 'Building'
                 echo 'Building'
                 echo 'Building'
+                echo 'Building'
             }
         }
         
