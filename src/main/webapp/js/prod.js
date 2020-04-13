@@ -1,19 +1,16 @@
-function loadProductList() {
-	AJAX_GET_URL = 'http://localhost:8080/all';
+function logout() {
+	AJAX_POST_URL = 'http://localhost:8081/invalidate';
 	$.ajax({
-		url : AJAX_GET_URL,
-		contentType : "application/json",
-		type : "GET",
+		url : AJAX_POST_URL,
+		type : "POST",
 		success : function(data, textStatus, jqXHR) {
 			console.log(data);
-			populateTable(data);
 		},
 		error : function(jqXHR, textStatus, errorThrown) {
 			alert('Error');
-			$("#errorMsg").innerHTML("error");
+		
 		}
 	});
-
 }
 
 function bySearch() {

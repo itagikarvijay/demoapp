@@ -34,13 +34,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 //		http.authorizeRequests().antMatchers("**/private/**").authenticated().anyRequest().permitAll().and().formLogin()
 //				.permitAll();
-		http.authorizeRequests()
-			.antMatchers("**/public/**").permitAll()
-			.antMatchers("**/private/**").authenticated()
-			.antMatchers("**/welcome/**").authenticated()
-			.antMatchers("/").permitAll()
-			.and().formLogin().loginPage("/login")
-			.passwordParameter("password").usernameParameter("username").defaultSuccessUrl("/welcome").permitAll();
+		http.authorizeRequests().antMatchers("**/public/**").permitAll().antMatchers("**/private/**").authenticated()
+				.antMatchers("**/welcome/**").authenticated().antMatchers("/").permitAll().and().formLogin()
+				.loginPage("/login").passwordParameter("password").usernameParameter("username")
+				.defaultSuccessUrl("/welcome")
+				.and()
+				.logout().logoutSuccessUrl("/logout");
 	}
 
 	@Bean

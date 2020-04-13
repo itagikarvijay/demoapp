@@ -4,5 +4,10 @@ spring:
     hibernate:      ddl-auto: update
     show-sql: true    datasource:    username: root    password: syncomp
     url: jdbc:mysql://localhost:3306/syndicate20  mvc:    view:      prefix: /WEB-INF/view/
-      suffix: .jsp
-server:    port: 8081    
+      suffix: .jsp  devtools:    restart:      exclude: templates/**    livereload:      enabled: false
+  session:    store-type: jdbc
+    jdbc:      initialize-schema: always
+    timeout: 15
+  h2:    console:      enabled: true        
+server:    port: 8081
+    
