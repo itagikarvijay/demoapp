@@ -22,10 +22,6 @@ public class LoginController {
 		System.out.println(principal.getName());
 		SecurityContext sc = SecurityContextHolder.getContext();
 		System.out.print("Printing");
-		System.out.print("Printing");
-		System.out.print("Printing");
-		System.out.print("PrintingPrintingPrintingPrintingPrintingPrinting");
-		System.out.print("PrintingChangedchanged");
 		sc.setAuthentication(authentication);
 		
 		if(authentication.isAuthenticated()) {
