@@ -24,6 +24,7 @@ public class LoginController {
 		System.out.print("Printing");
 		System.out.print("Printing");
 		System.out.print("Printing");
+		System.out.print("Printing");
 		sc.setAuthentication(authentication);
 		
 		if(authentication.isAuthenticated()) {
