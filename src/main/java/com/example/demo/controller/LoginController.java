@@ -21,6 +21,7 @@ public class LoginController {
 	public String getLoginMessage(Principal principal,Authentication authentication,HttpServletRequest request) {
 		
 		SecurityContext sc = SecurityContextHolder.getContext();
+		System.out.print("Printing");
 		sc.setAuthentication(authentication);
 		
 		if(authentication.isAuthenticated()) {
