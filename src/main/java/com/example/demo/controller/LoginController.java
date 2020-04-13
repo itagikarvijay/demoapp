@@ -23,6 +23,7 @@ public class LoginController {
 		SecurityContext sc = SecurityContextHolder.getContext();
 		System.out.print("Printing");
 		System.out.print("Printing");
+		System.out.print("Printing");
 		sc.setAuthentication(authentication);
 		
 		if(authentication.isAuthenticated()) {
