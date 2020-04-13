@@ -18,9 +18,8 @@ public class LoginController {
 	
 	@PreAuthorize("hasAnyRole('USER')")
 	@RequestMapping("/welcome")
-
 	public String getLoginMessage(Principal principal,Authentication authentication,HttpServletRequest request) {
-		
+		System.out.println(principal.getName());
 		SecurityContext sc = SecurityContextHolder.getContext();
 		sc.setAuthentication(authentication);
 		
