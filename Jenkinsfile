@@ -31,9 +31,6 @@ pipeline {
                 echo 'successfull...'
               }
             }
-            steps {
-                sh 'make publish'
-            }
         }
     }
 }
