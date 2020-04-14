@@ -24,5 +24,16 @@ pipeline {
                 echo 'Testing'
             }
         }
+        stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+                echo 'successfull...'
+              }
+            }
+            steps {
+                sh 'make publish'
+            }
+        }
     }
 }
