@@ -13,6 +13,14 @@ pipeline {
 				'''
 			}
 		}	
+		stage('Checkout') {
+			checkout([$class: 'GitSCM', 
+			branches: [[name: '*/master']], 
+			doGenerateSubmoduleConfigurations: false, 
+			extensions: [], 
+			submoduleCfg: [], 
+			userRemoteConfigs: [[url: 'https://github.com/itagikarvijay/demoapp.git']]])
+		}
         stage('build') {
             steps {
                 echo 'Building'
