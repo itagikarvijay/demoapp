@@ -30,7 +30,7 @@ public class LoginController {
 			session.setAttribute("USER_SESSION", authentication);
 		}
 		
-		
+		System.out.println(principal.getName());
 		System.out.println(principal.getName());
 
 
