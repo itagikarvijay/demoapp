@@ -15,6 +15,7 @@ pipeline {
 		}	
 		stage('Checkout code') {
 	        steps {
+	        	echo 'CheckingOut'
 	            git credentialsId: 'repoPassword', url: 'https://github.com/itagikarvijay/demoapp.git'
 	        }
     	}
@@ -22,6 +23,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building'
+                mvn clean verify
             }
         }
         
