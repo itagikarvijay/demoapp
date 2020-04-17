@@ -1,34 +1,35 @@
 package com.example.demo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-import com.example.demo.entity.Role;
-import com.example.demo.entity.User;
-import com.example.demo.entity.UserRole;
 import com.example.demo.user.IRole;
 import com.example.demo.user.IUser;
 import com.example.demo.user.IUserRole;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-	
+public class DemoApplication extends SpringBootServletInitializer implements CommandLineRunner {
+
 	@Autowired
 	IUser user;
-	
+
 	@Autowired
 	IRole role;
-	
+
 	@Autowired
 	IUserRole userRole;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(DemoApplication.class);
 	}
 
 	@Override

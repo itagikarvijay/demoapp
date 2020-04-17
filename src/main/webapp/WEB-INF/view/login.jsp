@@ -15,9 +15,9 @@
     <meta name="author" content="">
 
     <title>Log in with your credentials</title>
-	<script src="../bootstrap-4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../bootstrap-4.0.0/css/bootstrap.min.css">
-    <script src="../js/jquery-3.4.1.js"></script>
+	<script src="${pageContext.request.contextPath}/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-4.0.0/css/bootstrap.min.css">
+    <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.js"></script>
 	
 </head>
 
