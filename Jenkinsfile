@@ -19,14 +19,12 @@ pipeline {
 	            git credentialsId: 'repoPassword', url: 'https://github.com/itagikarvijay/demoapp.git'
 	        }
     	}
-			
         stage('build') {
             steps {
                 echo 'Building'
                 sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
-        
         stage('Test') {
             steps {
                 echo 'Testing'
